@@ -32,7 +32,7 @@ class App extends React.Component {
 
     onSubmitButton = (event) => {
         this.setState({
-            message: "My name is " + this.state.name + " and My favorit color is " + this.state.option + '.'
+            message: "My name is " + this.state.name + " and My favorite color is " + this.state.option + '.'
         });
     };
 
@@ -56,15 +56,17 @@ class App extends React.Component {
                 <Stack spacing={2} direction="row">
                     <Button 
                         variant="contained" 
+                        data-cy="submit-button"
                         onClick={this.onSubmitButton}>Submit
                     </Button>
                 </Stack>
                 <br></br>
-                <h2>{this.state.message}</h2>
+                <h2 data-cy="message">{this.state.message}</h2>
                 <Stack spacing={2} direction="row">
                 <Button 
                     variant="contained" 
                     color="error"
+                    data-cy="delete-button"
                     onClick={this.onDeleteButton}>Delete
                 </Button>
                 </Stack>

@@ -12,7 +12,7 @@ describe("Main Test", ()=>{
         cy.get('[data-cy="submit-button"]').click()
 
         cy.get('[data-cy="message"]').then( message => {
-            expect(message.text()).to.equal('My name is Adam and My favorit color is green.');
+            expect(message.text()).to.equal('My name is Adam and My favorite color is green.');
         })
 
         cy.get('[data-cy="delete-button"]').click()
@@ -29,7 +29,7 @@ describe("Main Test", ()=>{
         cy.get('[data-cy="submit-button"]').click()
 
         cy.get('[data-cy="message"]').then( message => {
-            expect(message.text()).to.equal('My name is Andrew and My favorit color is blue.');
+            expect(message.text()).to.equal('My name is Andrew and My favorite color is blue.');
         })
 
         cy.get('[data-cy="delete-button"]').click()
@@ -46,7 +46,7 @@ describe("Main Test", ()=>{
         cy.get('[data-cy="submit-button"]').click()
 
         cy.get('[data-cy="message"]').then( message => {
-            expect(message.text()).to.not.equal('My name is Andrew and My favorit color is blue.');
+            expect(message.text()).to.not.equal('My name is Andrew and My favorite color is blue.');
         })
 
         cy.get('[data-cy="delete-button"]').click()
@@ -63,7 +63,7 @@ describe("Main Test", ()=>{
         cy.get('[data-cy="submit-button"]').click()
 
         cy.get('[data-cy="message"]').then( message => {
-            expect(message.text()).to.equal('My name is Alex and My favorit color is red.');
+            expect(message.text()).to.equal('My name is Alex and My favorite color is red.');
         })
 
         cy.get('[data-cy="delete-button"]').click()
