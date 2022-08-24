@@ -5,7 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 function DropDown(props){
 
-    const [option, setOptions] = useState('red');
+    const [option, setOptions] = useState();
 
     const handleChange = (event) => {
         setOptions(event.target.value);
@@ -13,7 +13,11 @@ function DropDown(props){
     };    
 
     const renderedOptions = props.options.map((option) => (
-        <MenuItem key={option.value} value={option.value}>
+        <MenuItem 
+            key={option.value} 
+            value={option.value}
+            data-cy={`option-${option.value}`}
+        >
             {option.label}
         </MenuItem>
     ))
@@ -32,6 +36,7 @@ function DropDown(props){
                     id="outlined-select-color"
                     select
                     label="Select"
+                    data-cy="selector-option"
                     value={option}
                     onChange={handleChange}
                     helperText="Please select your color"
